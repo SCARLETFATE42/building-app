@@ -67,14 +67,16 @@ export const formatDateTime = (dateString: Date) => {
 };
 
 export function formatAmount(amount: number): string {
-  const formatter = new Intl.NumberFormat("en-US", {
+  const formatter = new Intl.NumberFormat("en-NG", {
     style: "currency",
-    currency: "USD",
+    currency: "NGN",
     minimumFractionDigits: 2,
   });
 
   return formatter.format(amount);
 }
+
+
 
 export const parseStringify = (value: any) => JSON.parse(JSON.stringify(value));
 
